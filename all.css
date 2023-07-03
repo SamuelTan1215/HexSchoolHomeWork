@@ -1,5 +1,330 @@
-h1{
-    color: red;
-    color: white;
-    background: black;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*,*:before,*:after{box-sizing:border-box;}
+
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+}
+*{
+    text-decoration: none;
+    font-family: Arial, "微軟正黑體", PMingLiU, sans-serif;
+  }
+  a:hover{
+      font-size: larger;
+  }
+  a:active{
+      color:darkgreen;
+      font-weight: bold;
+  }
+  
+/*分割線*/
+
+header{
+  position: relative;
+}
+  .platform  ul{
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(246, 246, 246);
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 1020px;
+    border-radius: 0 2px 0 0;
+  }
+  .platform img{
+    vertical-align: top;
+  }
+  .facebook a {
+    color:#4460a0;
+  }
+  .twitter a{
+    color:#00aaec;
+  }
+  .facebook,.twitter {
+    margin-right: 20px;
+    padding: 4px;
+  }
+  .facebook a{
+    color:4460a0;
+    
+  }
+  .twitter a{
+    color:00aaec;
+  }
+/*分割線*/
+  .list{
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    width: 1020px;
+    background: white;
+    border-radius: 0  0 2px 0;
+    
+  }
+  .list h1{
+    height: 32px;
+  }
+  .list h1 a{
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png) no-repeat  -20% 30%;
+    display: block;
+    width: 200px;
+    height: 44px;
+    text-indent: 101%;
+    white-space:nowrap;
+    overflow:hidden;
+
+  }
+  .menu{
+      
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      padding-right: 10px;
+  }
+  .menu a{
+    margin-right: 40px;
+    color:#05cd9b;
+    font-size: 18px;
+    display: inline-block;
+
+  }
+  .menu a:hover{
+      text-decoration:underline 5px ;
+      font-size: 1.4em;
+  }
+  .menu a:active{
+      font-weight: bold;
+  }
+/*分割線*/
+.ad-text{
+  background: linear-gradient(to right, rgba(0,0,0,0.5) ,rgb(246, 246, 246,0.2));
+  position: absolute;
+  z-index: 1;
+  top: 200px;
+  color: white;
+  line-height: 1.2;
+  font-size: 40px;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 1024px;
+}
+.ad-image a{
+  background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png) no-repeat;
+  display: block;
+  height: 450px;
+  text-indent: 101%;
+  white-space:nowrap;
+  overflow:hidden;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding: 10px;
+
+  
+}
+
+
+.card-group{
+    display: flex;
+    justify-content: space-around
+}
+.card-group-item{
+    box-shadow: 1px 1px 5px gray;
+    width: 300px;
+    padding: 10px;
+}
+.card-group-item img{
+    width: 280px;
+    
+}
+.card-group-item img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.card-group-item h2{
+    text-align: center;
+    font-weight: bold;
+   font-size: 18px;
+    margin-bottom: 10px;
+}
+.card-group-item p{
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    padding-left: 6px;
+}
+.special p{
+    margin-bottom: 10px;
+    margin-left: 28px;
+}
+.card-list li{
+    list-style: disc;
+    margin-left: 60px;
+    line-height: 1.3;
+}
+main{
+  margin-bottom: 60px;
+}
+/*分割線*/
+.compare-list table{
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+  th{
+    text-align-last: left;
+  }
+   h1{
+    text-align: center;
+    font-size: 24px;
+    font-weight:bold;
+    margin-bottom: 16px;
+  }
+  .table th,td{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    padding: 14px 65px 14px 65px;
+  }
+  .tabletop{
+    background:lightgray;
+    font-weight: bold;
+  }
+  .green{
+    color:#61b9a3;
+  }
+/*分割線*/
+
+textarea {
+  resize: none;
+  height: 200px;
+  width: 400px;
+  
+}
+.form{
+    background:  linear-gradient(to bottom,#00644b,#009772);
+    padding: 20px 10px 20px 10px ; 
+  }
+.form-title{
+    color:white;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+  }
+
+.form-content{
+    display: flex;
+    justify-content: center;
+    padding:30px 12px 30px 12px;
+  }
+.comment-here{
+  margin-right: 40px;
+}
+.comment-here ::placeholder{
+    font-style: italic;
+    text-align: center;
+    line-height: 200px;
+  }
+.personal-details label{
+    color:white;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+.text{
+    display: block;
+    margin-bottom: 5px;
+    width: 450px;
+    height: 30px;
+  }
+
+ .submit-btn{
+  font-size: 15px;
+   width: 60px;
+   color: white;
+   background: #00cc99;
+   border: 0px;
+   padding: 5px 14px 5px 14px ;
+   display: block;
+   cursor: pointer;
+   border-radius: 10%;
+   float: right;
+  }
+  .submit-btn:hover{
+    background: white;
+    color: #00cc99 ;
+    transform: scale(1.1);
+  }
+  .submit-btn:active{
+    transform: scale(0.85);
+    color: #054636 ;
+    box-shadow: 2px 2px 14px gray;
+  }
+
+/*分割線*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+footer li{
+    margin-bottom: 10px;
+    margin-right: 18px;
+}
+.red{
+    color:#d55d94;
+}
+/*分割線*/
