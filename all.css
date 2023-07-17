@@ -48,7 +48,9 @@ table {
 }
 
 
-*,*:before,*:after{box-sizing:border-box;}
+*,*:before,*:after{
+  box-sizing:border-box;
+}
 
 .wrap{
     width: 1024px;
@@ -58,13 +60,7 @@ table {
     text-decoration: none;
     font-family: Arial, "微軟正黑體", PMingLiU, sans-serif;
   }
-  a:hover{
-      font-size: larger;
-  }
-  a:active{
-      color:darkgreen;
-      font-weight: bold;
-  }
+
   
 /*分割線*/
 
@@ -77,7 +73,7 @@ header{
     background: rgb(246, 246, 246);
     position: absolute;
     z-index: 1;
-    top: 0px;
+    top: 0 ;
     width: 1020px;
     border-radius: 0 2px 0 0;
   }
@@ -94,13 +90,13 @@ header{
     margin-right: 20px;
     padding: 4px;
   }
-  .facebook a{
-    color:4460a0;
-    
+  .facebook a:hover{
+    font-weight: bold;
+  } 
+  .twitter a:hover{
+    font-weight: bold;
   }
-  .twitter a{
-    color:00aaec;
-  }
+
 /*分割線*/
   .list{
     display:flex;
@@ -127,26 +123,39 @@ header{
 
   }
   .menu{
-      
       display: flex;
       justify-content:space-around;
       align-items: center;
-      padding-right: 10px;
   }
-  .menu a{
-    margin-right: 40px;
-    color:#05cd9b;
-    font-size: 18px;
-    display: inline-block;
 
+  .menu li{
+    margin-right: 30px;
   }
-  .menu a:hover{
+
+  .dropdown a{
+    color:#05cd9b;
+    font-size: 16px;
+    display: block;
+  }
+
+  .dropdown-list{
+    display: none;
+  }
+ 
+  .dropdown a:hover .dropdown-list {
+    display: block;
+  }
+  
+  .dropdown a:hover{
       text-decoration:underline 5px ;
-      font-size: 1.4em;
+      font-size: 1.1em;
   }
-  .menu a:active{
+  .dropdown a:active{
       font-weight: bold;
   }
+
+
+
 /*分割線*/
 .ad-text{
   background: linear-gradient(to right, rgba(0,0,0,0.5) ,rgb(246, 246, 246,0.2));
