@@ -6,7 +6,9 @@
     <title>使用 HTML、CSS 開發一個網站</title>
     <link rel="shortcut icon" href="images/HexSchool.ico">
     <meta name='keywords' content='六角學院,作業' />
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="fontAwesome/css/all.css">
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
@@ -59,26 +61,56 @@
             讓您奠定良好的前端基礎
           </h2>
         </div>
-  <!--分割線-->      
-          <div class="ad-image">
-            <a href="#">六角學院</a>
-          </div>
+  <!--swiper plugin-->
+
+
+
+
+          <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt=""></div>
+      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt=""></div>
+      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt=""></div>
+    
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- hold this slide for 2 seconds -->
+   <div class="swiper-slide" data-swiper-autoplay="2000">
+
+  </div>
+            
+
         </header>
   
           <main>
             <ul class="card-group">
               <li class="card-group-item">
-                <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png" alt="html5">
+                    <!--lightbox plugin-->   
+                <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png" data-lightbox="card-group-item" data-title="HTML 5 基礎教學">
+                  <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png" alt="html5">
+                </a>
                 <h2>HTML 5 基礎教學</h2>
                 <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
               </li>
               <li class="card-group-item">
-                <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png" alt="RWD">
+                <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png" data-lightbox="card-group-item" data-title="響應式網站設計">
+                  <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png" alt="RWD">
+                </a>
                 <h2>響應式網站設計</h2>
                 <p>響&nbsp;應&nbsp;式&nbsp;網站設計(Responsive Web design), 目前大多使用者均是以手機瀏覽的情況下，響應式 網站已經是必備的。六角學院將會提供業異響應式開發方法，讓學生瞭解行動版發發技巧。</p>
               </li>
               <li class="card-group-item">
-                <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png" alt="jQuery">
+                <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png" data-lightbox="card-group-item" data-title="jQuery實戰教學">
+                  <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png" alt="jQuery">
+                </a>
                 <h2>jQuery實戰教學</h2>
                 <span class="special">
                   <p>本課程有以下特色</p>
@@ -177,12 +209,17 @@
               <li>電&emsp; 話&ensp; : <span class="red">0999123456</span></li>
             </ul>
           </footer>
-  <!--分割線-->
+
+          <div class="top">
+            <a href="#" class="fa-regular fa-circle-up"></a>
         </div>
 
+
+  <!--分割線-->
 <!--JavaScript-->
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/lightbox.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/all.js"></script>
 </body>
 </html>

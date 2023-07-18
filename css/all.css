@@ -51,16 +51,15 @@ table {
 *,*:before,*:after{
   box-sizing:border-box;
 }
+*{
+  font-family: Arial, "微軟正黑體", PMingLiU, sans-serif;
+  text-decoration: none;
+}
 
 .wrap{
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
 }
-*{
-    text-decoration: none;
-    font-family: Arial, "微軟正黑體", PMingLiU, sans-serif;
-  }
-
   
 /*分割線*/
 
@@ -72,7 +71,7 @@ header{
     justify-content: flex-end;
     background: rgb(246, 246, 246);
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     top: 0 ;
     width: 1020px;
     border-radius: 0 2px 0 0;
@@ -102,7 +101,7 @@ header{
     display:flex;
     justify-content: space-between;
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     top: 24px;
     width: 1020px;
     background: white;
@@ -142,7 +141,7 @@ header{
     display: none;
   }
  
-  .dropdown a:hover .dropdown-list {
+  .dropdown a:hover + .dropdown-list {
     display: block;
   }
 
@@ -160,7 +159,7 @@ header{
 .ad-text{
   background: linear-gradient(to right, rgba(0,0,0,0.5) ,rgb(246, 246, 246,0.2));
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   top: 200px;
   color: white;
   line-height: 1.2;
@@ -168,20 +167,13 @@ header{
   padding-left: 25px;
   padding-top: 25px;
   padding-bottom: 20px;
-  width: 1024px;
-}
-.ad-image a{
-  background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png) no-repeat;
-  display: block;
-  height: 450px;
-  text-indent: 101%;
-  white-space:nowrap;
-  overflow:hidden;
-  background-size: cover;
-  margin-bottom: 60px;
-  padding: 10px;
+  width: 1020px;
 
-  
+}
+
+.swiper {
+  width: 100%;
+  height: 450px;
 }
 
 
@@ -337,3 +329,20 @@ footer li{
     color:#d55d94;
 }
 /*分割線*/
+.top{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  
+}
+.top a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 50%;
+}
