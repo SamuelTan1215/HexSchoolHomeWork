@@ -109,9 +109,7 @@ header{
     height:50px;
     
   }
-  .list h1{
-    height: 32px;
-  }
+ 
   .list h1 a{
     background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png) no-repeat  -20% 30%;
     display: block;
@@ -126,36 +124,57 @@ header{
       display: flex;
       justify-content:space-around;
       align-items: center;
+      width:30%;
   }
 
-  .menu li{
-    margin-right: 30px;
-  }
   .dropdown{
     position: relative;
+    
+    margin-right: 30px;
   }
   .dropdown a{
     color:#05cd9b;
     font-size: 16px;
     display: block;
+
   }
+
+
 
   .dropdown-list{
     display: none;
     position:absolute;
+    background: white;
   }
- 
-  .dropdown a:hover + .dropdown-list {
+  .dropdown a:hover + .dropdown-list{
     display: block;
   }
+  .dropdown-list a{
+    width: 130px;
+    font-size: 14px;
+    display: block;
+    margin-left: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+  }
+
 
   .dropdown a:hover{
-      text-decoration:underline 5px ;
+      text-decoration:underline 1px ;
       font-size: 1.1em;
   }
   .dropdown a:active{
       font-weight: bold;
   }
+  .dropdown-list a:hover{
+    text-decoration:underline 1px ;
+    font-size: 1.1em;
+  }
+  .dropdown-list a:active{
+    font-weight: bold;
+  }
+
 
 
 
@@ -166,8 +185,8 @@ header{
   z-index: 5;
   top: 200px;
   color: white;
-  line-height: 1.15;
-  font-size: 36px;
+  line-height: 1.2;
+  font-size: 32px;
   padding-left: 25px;
   padding-top: 12px;
   padding-bottom: 12px;
