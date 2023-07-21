@@ -47,8 +47,28 @@ table {
 	border-spacing: 0;
 }
 
+/*
 
-*,*:before,*:after{
+作業回饋
+已修改=@
+未修改=！
+
+@head 標籤可以多一些描述，例如 fb icon、meta、apple icon 等等，詳情可瀏覽第九章 head 細節
+！最外層的 .wrap 有設定寬度， .platform ul 是區塊元素會自適應父層的設定，因此不需再另外設寬度
+！.list a 有撐開高度 .list h1 不須再設定一次高度
+@建議將 .menu 中的「首頁」「產品介紹」「聯絡我們」，分別用 li 包起來
+@一個網頁只會有一個 h1，請將多餘的 h1 改用其他標題標籤呈現
+@.table 除了第一行用 <th> 剩下都用 <td> 就可以
+@.form-title 不需要寫到兩個 h3，可以用 br 來斷行
+@textarea 請和 input 寫在同一個 form 表單內，日後與後端銜接時，方便將所需資料一次送出
+@.comment-here 已經設有寬度，可將 HTML 的屬性 cols 刪除
+可以將 .personal-details input 中 type 的屬性 "text"，改為電話 @"tel" 或是信箱 "email"
+@form 的部分不需要用到 <br> 標籤來斷行，可以在 input 設定 display: block 的屬性向下排列
+!信箱與電話可使用 emmet 語法 a:mail、a:tel 做設定以增加使用者體驗，當使用者透過手機點擊該區塊時，就會自動開啟相對功能。
+@.footer 的 logo 建議也可以用圖片取代文字的方法喔
+
+*/
+*,*::before,*::after{
   box-sizing:border-box;
 }
 *{
@@ -73,7 +93,7 @@ header{
     position: absolute;
     z-index: 5;
     top: 0 ;
-    width: 1020px;
+    width: 1020px;/*需設定寬度，實測會跑版*/
     border-radius: 0 2px 0 0;
   }
   .platform img{
@@ -114,7 +134,7 @@ header{
     background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png) no-repeat  -20% 30%;
     display: block;
     width: 200px;
-    height: 44px;
+    height: 44px;/*需設定高度，實測會跑版*/
     text-indent: 101%;
     white-space:nowrap;
     overflow:hidden;
@@ -146,7 +166,7 @@ header{
     position:absolute;
     background: white;
   }
-  .dropdown a:hover + .dropdown-list{
+  .dropdown:hover  .dropdown-list{
     display: block;
   }
   .dropdown-list a{
@@ -252,7 +272,7 @@ main{
   th{
     text-align-last: left;
   }
-   h1{
+  .compare-list h2{
     text-align: center;
     font-size: 24px;
     font-weight:bold;
@@ -292,26 +312,27 @@ textarea {
 
 .form-content{
     display: flex;
-    justify-content: center;
-    padding:30px 12px 30px 12px;
+    justify-content: space-between;
+    padding:30px 16px 30px 16px;
   }
 .comment-here{
-  margin-right: 40px;
+  margin-right: 30px;
+  width: 450px;  
 }
 .comment-here ::placeholder{
     font-style: italic;
     text-align: center;
     line-height: 200px;
   }
-.personal-details label{
+.detail label{
     color:white;
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: block;
   }
 .text{
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1em;
     width: 450px;
     height: 30px;
   }
@@ -346,6 +367,16 @@ footer{
     padding: 8px;
     margin-bottom: 50px;
     align-items: center;
+}
+footer a{
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/footerLogo.png) no-repeat ;
+    display: block;
+    width: 171px;
+    height: 36px;/*需設定高度，實測會跑版*/
+    text-indent: 101%;
+    white-space:nowrap;
+    overflow:hidden;
+
 }
 footer li{
     margin-bottom: 10px;
